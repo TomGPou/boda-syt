@@ -1,9 +1,9 @@
 ---
-import { Picture } from 'astro:assets';
-import churchImg from '../assets/img/church.png';
+import { Picture } from "astro:assets";
+import churchImg from "../assets/img/church.png";
 ---
 
-<div class="relative h-auto shadow-sm">
+<div class="relative shadow-sm">
   <!-- BG Leaves -->
   <div
     class="absolute inset-0 bg-[url('/leaves-top.png')] bg-contain bg-no-repeat opacity-10"
@@ -14,15 +14,16 @@ import churchImg from '../assets/img/church.png';
   >
   </div>
   <div
-    class="relative flex flex-col items-center justify-between gap-20 p-10 text-center"
+    class="relative flex w-full flex-col items-center justify-around gap-10 p-5 text-center"
   >
-    <Picture src={churchImg} alt='iglesia' class="h-auto w-48"/>
+    <Picture src={churchImg} alt="iglesia" class="h-auto w-48" />
     <div>
       <p class="text-xs tracking-widest">LA CEREMONIA SERA EN :</p>
       <h2 class="text-allison my-4 text-5xl">
         Parroquia Nuestra Señora del Carmen
       </h2>
-      <iframe class="w-full shadow"
+      <iframe
+        class="w-full shadow"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.1090529749463!2d-58.313810023388434!3d-34.70242926271976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a3326ed987f297%3A0xcb18bcc269fff71!2sParroquia%20Nuestra%20Se%C3%B1ora%20del%20Carmen!5e0!3m2!1ses-419!2sar!4v1730382840475!5m2!1ses-419!2sar"
         title="Mapa de Parroquia Nuestra Señora del Carmen"
         height="300"

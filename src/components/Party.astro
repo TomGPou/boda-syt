@@ -1,0 +1,37 @@
+---
+import { Picture } from 'astro:assets';
+import toastImg from '../assets/img/toast.png';
+---
+
+<div class="flex flex-col items-center justify-between bg-gray-50 text-center">
+  <div class="pt-10">
+    <Picture src={toastImg} alt='brindis fiesta' class="h-auto w-48" />
+    <p class="pt-3 text-xs tracking-widest">LA CELEBRACIÓN SERA EN:</p>
+  </div>
+  <div class="relative h-auto w-full">
+    <!-- BG Salon -->
+    <div
+      class="absolute inset-0 bg-[url('/bg-salon.png')] bg-cover bg-center bg-no-repeat opacity-20"
+    >
+    </div>
+    <div
+      class="relative flex w-full flex-col items-center justify-around gap-10 p-5 text-center"
+    >
+      <h2 class="text-allison text-5xl">Salón del Carmen</h2>
+      <iframe class="w-full shadow"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13120.376881719825!2d-58.311943!3d-34.7028034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a3326f20e9d1cb%3A0x1598b92dd0d32272!2sSal%C3%B3n%20del%20Carmen!5e0!3m2!1ses-419!2sar!4v1730386247216!5m2!1ses-419!2sar"
+        title="Mapa de Salón del Carmen"
+        height="300"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div>
+        <p class="text-xs tracking-widest">29/11/2025 21:00hs</p>
+        <p class="text-xs tracking-widest">
+          Raquel Español 325,Wilde, Provincia de Buenos Aires
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

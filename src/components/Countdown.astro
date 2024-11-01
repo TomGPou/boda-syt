@@ -1,0 +1,48 @@
+---
+
+---
+
+<div class="bg-teal-50 w-full p-5 shadow-md">
+  <p class="text-allison text-4xl">faltan:</p>
+  <div class="flex justify-center gap-10 text-center">
+    <div>
+      <h3 id="days" class="text-xl font-bold"></h3>
+      <p class="text-xs">DIAS</p>
+    </div>
+    <div>
+      <h3 id="hours" class="text-xl font-bold"></h3>
+      <p class="text-xs">HORAS</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  const targetDate = new Date("2025-11-29T00:19:00");
+
+  function updateTime() {
+    const now = new Date().getTime();
+    const distance = targetDate.getTime() - now; // targetDate is now a Date object
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+    );
+
+    return { days, hours};
+  }
+
+  function updateCountdown() {
+    const time = updateTime();
+
+    const daysElement = document.getElementById("days");
+    const hoursElement = document.getElementById("hours");
+
+    if (daysElement && hoursElement) {
+      daysElement.textContent = time.days.toString();
+      hoursElement.textContent = time.hours.toString().padStart(2, "0");
+    }
+  }
+
+  setInterval(updateCountdown, 1000);
+  updateCountdown();
+</script>
